@@ -12,7 +12,7 @@ declare(strict_types = 1);
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('files', 'FileController@index')->name('uploaded.files');
+Route::get('/', 'FileController@index')->name('uploaded.files');
 Route::get('files/create', 'FileController@create')->name('upload.page');
 Route::post('files/store', 'FileController@store')->name('upload.file');
 Route::get('files/{file}/{extension}/download', 'FileController@download')->name('download.file');
